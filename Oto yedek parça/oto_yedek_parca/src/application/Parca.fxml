@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="479.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ParcaController">
+   <children>
+      <TabPane layoutX="281.0" layoutY="90.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #E9967A;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Parça">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="550.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="28.0" text="Marka:" />
+                        <Label layoutX="27.0" layoutY="60.0" text="Model:" />
+                        <Label layoutX="27.0" layoutY="91.0" text="Yıl:" />
+                        <Label layoutX="27.0" layoutY="121.0" text="Yakıt" />
+                        <ComboBox fx:id="combo_marka" layoutX="91.0" layoutY="24.0" onAction="#combo_marka_click" prefWidth="150.0" />
+                        <ComboBox fx:id="combo_model" layoutX="91.0" layoutY="56.0" onAction="#combo_model_click" prefWidth="150.0" />
+                        <ComboBox fx:id="combo_yil" layoutX="91.0" layoutY="87.0" onAction="#combo_yil_click" prefWidth="150.0" />
+                        <ComboBox fx:id="combo_yakit" layoutX="91.0" layoutY="117.0" onAction="#combo_yakit_click" prefWidth="150.0" />
+                        <Label layoutX="296.0" layoutY="28.0" text="Kategori:" />
+                        <Label layoutX="296.0" layoutY="60.0" text="Parça:" />
+                        <Label layoutX="296.0" layoutY="91.0" text="Adet:" />
+                        <Label layoutX="296.0" layoutY="121.0" text="Müşteri Adı:" />
+                        <Label layoutX="296.0" layoutY="152.0" text="Tarih:" />
+                        <ComboBox fx:id="combo_kategori" layoutX="362.0" layoutY="24.0" onAction="#combo_kategori_click" prefWidth="150.0" />
+                        <ComboBox fx:id="combo_parca" layoutX="362.0" layoutY="56.0" onAction="#combo_parca_click" prefWidth="150.0" />
+                        <TextField fx:id="txt_adet" layoutX="362.0" layoutY="87.0" promptText="Adet" />
+                        <TextField fx:id="txt_müsteri_adi" layoutX="363.0" layoutY="117.0" promptText="Müşteri Adı" />
+                        <Button fx:id="btn_sat" layoutX="444.0" layoutY="211.0" mnemonicParsing="false" onAction="#btn_sat_click" prefHeight="26.0" prefWidth="61.0" text="Sat" />
+                        <Button fx:id="btn_temizle" layoutX="360.0" layoutY="209.0" mnemonicParsing="false" onAction="#btn_temizle_click" text="Temizle" />
+                        <Button fx:id="btn_cikis" layoutX="360.0" layoutY="282.0" mnemonicParsing="false" onAction="#btn_cikis_click" prefHeight="26.0" prefWidth="146.0" text="Çıkış" />
+                        <TableView fx:id="tbl_raf_fiyat" layoutX="14.0" layoutY="187.0" prefHeight="242.0" prefWidth="318.0" style="-fx-background-color: #66CDAA;">
+                       
+                          <columns>
+                            <TableColumn fx:id="tbl_raf" prefWidth="99.20000839233398" text="Raf" />
+                            <TableColumn fx:id="tbl_fiyat" prefWidth="85.5999755859375" text="Fiyat" />
+                            <TableColumn fx:id="tbl_parca" prefWidth="132.80006408691406" text="Parça" />
+                          </columns>
+                        </TableView>
+                        
+                        <Button fx:id="btn_goruntule" layoutX="360.0" layoutY="243.0" mnemonicParsing="false" onAction="#btn_goruntule_click" prefHeight="26.0" prefWidth="146.0" text="Görüntüle" />
+                        <Button fx:id="btn_personel" layoutX="360.0" layoutY="320.0" mnemonicParsing="false" onAction="#btn_personel_click" prefHeight="26.0" prefWidth="146.0" text="Personel" />
+                       
+                        <Button fx:id="btn_musterigecmisi" layoutX="359.0" layoutY="358.0" mnemonicParsing="false" onAction="#btn_musterigecmisi_click" prefHeight="26.0" prefWidth="146.0" text="Müşteri Geçmişi" />
+                        <TextField fx:id="txt_tarih" layoutX="363.0" layoutY="148.0" promptText="yyyy-aa-gg" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Parça Ekle">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="119.0" layoutY="55.0" prefHeight="469.6" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="80.0" layoutY="108.0" text="Kategori:" />
+                              <Label layoutX="80.0" layoutY="152.0" text="Parça:" />
+                              <TextField fx:id="txt_adet_ekle" layoutX="150.0" layoutY="224.0" promptText="Adet" />
+                              <Label layoutX="80.0" layoutY="193.0" text="Raf:" />
+                              <Label layoutX="80.0" layoutY="228.0" text="Adet:" />
+                              <Button fx:id="btn_ekle" layoutX="225.0" layoutY="264.0" mnemonicParsing="false" onAction="#btn_ekle_click" prefHeight="26.0" prefWidth="72.0" text="Ekle" />
+                              <ComboBox fx:id="combo_kategori_ekle" layoutX="150.0" layoutY="104.0" onAction="#combo_kategori_ekle_click" prefWidth="150.0" />
+                              <ComboBox fx:id="combo_parca_ekle" layoutX="150.0" layoutY="148.0" onAction="#combo_parca_ekle_click" prefWidth="150.0" />
+                              <Button fx:id="btn_temizle_ekle" layoutX="150.0" layoutY="264.0" mnemonicParsing="false" onAction="#btn_temizle_ekle_click" prefHeight="26.0" prefWidth="70.0" text="Temizle" />
+                              <Label layoutX="80.0" layoutY="33.0" text="Marka:" />
+                              <Label layoutX="80.0" layoutY="74.0" text="Model:" />
+                              <ComboBox fx:id="combo_marka_ekle" layoutX="150.0" layoutY="29.0" onAction="#combo_marka_ekle_click" prefWidth="150.0" />
+                              <ComboBox fx:id="combo_model_ekle" layoutX="150.0" layoutY="70.0" onAction="#combo_model_ekle_click" prefWidth="150.0" />
+                              <ComboBox fx:id="combo_raf_ekle" layoutX="150.0" layoutY="189.0" onAction="#combo_raf_ekle_click" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
